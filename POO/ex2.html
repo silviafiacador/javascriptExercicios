@@ -37,7 +37,7 @@
             setAltura(_altura){
                 this.altura=_altura
             }
-            imprimeTudo(_nome,_nascimento,_altura) {
+            imprime(_nome,_nascimento,_altura) {
                 alert ("Nome: "+_nome+"\nNascimento: "+_nascimento+"\nAltura: "+_altura)
             }
             calculaIdade(_nascimento)
@@ -56,14 +56,15 @@
         pessoa.setNome("Silvia")
         pessoa.setNascimento("16/08/1963")
         pessoa.setAltura("1.68 m")
-        pessoa.imprimeTudo(pessoa.getNome(),pessoa.getNascimento(),pessoa.getAltura())
-
+        pessoa.imprime(pessoa.getNome(),pessoa.getNascimento(),pessoa.getAltura())
+     
         var pessoa1 = new Pessoa()   //objeto
         pessoa1.setNome("Sandro")
         pessoa1.setNascimento("21/05/1963")
         pessoa1.setAltura("1.80 m")
         pessoa1.calculaIdade(pessoa1.getNascimento())
-        pessoa1.imprimeTudo(pessoa1.getNome(),pessoa1.getNascimento(),pessoa1.getAltura())
+        pessoa1.imprime(pessoa1.getNome(),pessoa1.getNascimento(),pessoa1.getAltura())
+       
     </script>
 </head>
 <body>
