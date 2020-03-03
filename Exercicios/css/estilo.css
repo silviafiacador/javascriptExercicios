@@ -1,0 +1,114 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	color:#555;
+	font: 18px Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+}
+main {
+	max-width: 1200px;
+	overflow: hidden;
+	margin: 0 auto;
+	padding-bottom: 50px;
+}
+nav {
+	margin-bottom: 10px;
+}
+h1{
+	font-size: 30px;
+	text-align: center;
+}
+h2{
+	font-size: 20px;
+}
+h1, h2 {
+	background-color: #3766A6;
+	color: #fff !important;
+	padding: 10px;
+}
+p{font-size: 18px;}
+p.resposta {
+	margin: 20px 10px;
+	color: red;
+	font-weight: bolder;
+}
+article {
+	float: left;
+	background-color: #F0F2F3 !important;
+	margin: 10px;
+	height: 530px;
+	width: 550px;
+	padding: 20px;
+}
+article.maior{
+	height: 700px;
+}
+
+.label-nota {
+	display: block;
+	width: 150px;
+	float: left;
+	line-height: 35px;
+}
+.glyphicon{
+	color:#fff;
+}
+input:disabled{
+	width: 100% !important;
+	font-size: 20px;
+}
+input.longo{width: 150px;}
+.panel-body{
+	border: 1px solid #999;
+	border-radius: 5px;
+	background-color: #E8E8E8;
+	margin-top: 40px;
+}
+.list-group{
+	width: 360px;
+	font-size: 20px;
+}
+.list-group span{
+	float: right;
+	background-color: #eee;
+	padding: 1px 10px;
+}
+.tabela-opinioes{
+	margin-bottom: 30px !important;
+	width: 400px !important;
+}
+tr{
+	font-size: 14px;
+}
+footer h4{
+	text-align: center;
+}
+
+@media screen and (min-width:995px) and (max-width:1200px) {
+article {
+	width: 450px !important;
+}
+}
+
+@media screen and (max-width:994px) {
+article {
+	width: 690px !important;
+	height:380px !important;
+}
+}
+/*para a div popup:*/
+#popup {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	z-index: 1000;
+	width: 300px;
+	height: 220px;
+	margin-left: -150px;
+	margin-top: -92px;
+	padding: 20px;
+	background-color: #4C91D1;
+	font-size: 20px;
+	color: #333;
+	display: none;
+}
+

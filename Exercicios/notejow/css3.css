@@ -1,0 +1,105 @@
+@charset "utf-8";
+/* CSS Document */
+/* Autor: Ronaldo Diniz */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.nav-toggle {
+	display: block;
+	padding: 10px 10px 15px 10px;
+	background: none;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index: 50;
+}
+.hamburger {
+	width: 1.08em;
+	position: fixed;
+	display: inline-block;
+	height: 0.6em;
+	font-size: 1.2em;
+	background: none;
+}
+.hamburger div {
+	width: 10%;
+	background: #000;
+	display: #C7183E;
+	position: fixed;
+	left: 5%;
+	 top: 50%; 
+	
+	border-radius: 1.2px;
+	transition: 0.5s all;
+	-webkit-transition: 0.5s all;
+	-ms-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-o-transition: 0.5s all;
+}
+.hamburger div:nth-child(1) {
+	top: 0px;
+}
+.hamburger div:nth-child(2) {
+	top: 0.36em;
+}
+.hamburger div:nth-child(3) {
+	top: 0.73em;
+}
+.sidebar {
+	width:40%;
+	height: 60%;
+	position:fixed;
+	background:none;
+	top: 0px;
+	left: 0px;
+	z-index: 5;
+	visibility: hidden;
+	opacity: 0;
+	transition: 0.2s all;
+	-webkit-transition: 0.2s all;
+	-ms-transition: 0.2s all;
+	-moz-transition: 0.2s all;
+	-o-transition: 0.2s all;
+}
+.sidebar>ul{
+	margin-top: 100px;
+	list-style-type: none;
+}
+a{color:#C7183E!important;	font-family: 'Poiret One', cursive;font-size: 25px;margin-left: 15px;}
+
+a:hover{text-decoration: none !important; 
+}
+#navicon {
+	display: none;
+}
+#navicon:checked ~ .sidebar {
+	visibility: visible;
+	opacity: 1;
+}
+#navicon:checked ~ .nav-toggle > .hamburger div {
+	top: 0.32em;
+}
+#navicon:checked ~ .nav-toggle > .hamburger div:nth-child(1) {
+	-webkit-transform: rotate(-180deg);
+	-ms-transform: rotate(-180deg);
+	-moz-transform: rotate(-180deg);
+	-o-transform: rotate(-180deg);
+	transform: rotate(-180deg);
+}
+/*
+#navicon:checked ~ .nav-toggle > .hamburger span:nth-child(2) {
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+#navicon:checked ~ .nav-toggle > .hamburger span:nth-child(3) {
+	-webkit-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}*/

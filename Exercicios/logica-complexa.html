@@ -1,0 +1,317 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width= device-width, initial-scale=1">
+<title>Exercícios com Javascript</title>
+<link rel="stylesheet" href="css/estilo.css">
+<link rel="stylesheet" href="css/bootstrap.css">
+</head>
+
+<body>
+<main class="container">
+  <header class="page-header">
+    <h1>Raciocínio lógico com Javascript (estruturas de controle)</h1>
+  </header>
+  <nav class="collapse navbar-collapse">
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="index.html" class="navbar-link">Introdução ao Javascript</a></li>
+      <li><a href="logica-simples.html" class="navbar-link">Lógica simples com JS</a></li>
+      <li><a href="logica-complexa.html" class="navbar-link">Lógica complexa com JS</a></li>
+    </ul>
+  </nav>
+  
+  <!--EXERCÍCIO 1-->
+  <article class="maior panel panel-primary">
+    <h2><span class="glyphicon glyphicon-bed"></span> Diárias do hotel</h2>
+    <p>Um hotel cobra R$ 80,00 a diária e mais uma taxa de serviços conforme tabela abaixo. Monte uma interface onde o usuário possa calcular sua despesa total informando quantos dias ficou hospedado.</p>
+    <ul>
+      <li>R$ 5,50 por diária, se o número de diárias for maior que 15;</li>
+      <li>R$ 6,00 por diária, se o número de diárias for igual a 15;</li>
+      <li>R$ 8,00 por diária, se o número de diárias for menor que 15.</li>
+    </ul>
+    <div class="panel-body">
+      <p class="form-inline">
+        <label for="dias">Quantos dias ficou hospedado em nosso hotel?</label>
+        <input type="number" id="dias" class="form-control">
+      </p>
+      <p>
+        <button id="calcula-dias" class="btn btn-primary">CALCULAR</button>
+        <button id="limpa-hotel" class="btn btn-danger resetar">LIMPAR CAMPOS</button>
+      </p>
+      <p class="form-inline">
+        <label for="consumo">TOTAL (inclui taxas de serviços):</label>
+        <input class="form-control" type="text" id="resposta-hospedagem" disabled>
+      </p>
+    </div>
+  </article>
+  
+  <!--EXERCÍCIO 2-->
+  <article class="maior panel panel-primary">
+    <h2><span class="glyphicon glyphicon-alert"></span> Cálculo do IMC</h2>
+    <p>Elabore um programa que leia o peso e a altura de um adulto e mostre sua condição de peso,o IMC, cuja fórmula é IMC = peso / (altura2). Siga a tabela abaixo:</p>
+    <table id="tabela-imc" class="table table-condensed">
+      <tbody>
+        <tr>
+          <td>Abaixo de 17</td>
+          <td>Muito abaixo do <em>peso</em></td>
+        </tr>
+        <tr>
+          <td>Entre 17 e 18,49</td>
+          <td>Abaixo do <em>peso</em></td>
+        </tr>
+        <tr>
+          <td>Entre 18,5 e 24,99</td>
+          <td><em>Peso</em> normal</td>
+        </tr>
+        <tr>
+          <td>Entre 25 e 29,99</td>
+          <td>Acima do <em>peso</em></td>
+        </tr>
+        <tr>
+          <td>Entre 30 e 34,99</td>
+          <td><em>Obesidade</em> I</td>
+        </tr>
+        <tr>
+          <td>Entre 35 e 39,99</td>
+          <td><em>Obesidade</em> II (severa)</td>
+        </tr>
+        <tr>
+          <td>Acima de 40</td>
+          <td><em>Obesidade</em> III (mórbida)</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="panel-body">
+      <p class="form-inline">
+        <label for="peso">Informe o peso:</label>
+        <input type="number" step=".1" id="peso" class="form-control">
+        quilos. </p>
+      <p class="form-inline">
+        <label for="altura">Informe a altura:</label>
+        <input type="number" step=".1" id="altura" class="form-control">
+        metros. </p>
+      <p>
+        <button id="calcula-imc" class="btn btn-primary">CALCULAR IMC</button>
+        <button type="reset" class="resetar btn btn-danger">LIMPAR CAMPOS</button>
+      </p>
+      <p class="form-inline">
+        <label for="resposta-imc">CONDIÇÃO DE PESO:</label>
+        <input class="form-control" type="text" id="resposta-imc" disabled>
+      </p>
+    </div>
+  </article>
+  
+  <!--EXERCÍCIO 3-->
+  <article class="maior panel panel-primary">
+    <h2><span class="glyphicon glyphicon-usd"></span> Mordida do Leão</h2>
+    <p>O desconto do IRRF (Imposto de Renda Retido na Fonte) é calculado sobre o salário líquido após a dedução da contribuição ao INSS. Elabore um sistema que permita a entrada do valor de um salário bruto e mostre, conforme as tabelas ao lado, os valores descontados.</p>
+    <div class="panel-body">
+      <p class="form-inline">
+        <label for="salario">Informe o salário:</label>
+        <input type="number" id="salario" class="form-control">
+      </p>
+      <p>
+        <button id="calcula-descontos" class="btn btn-primary">CALCULAR DESCONTO</button>
+        <button type="reset" class="btn btn-danger resetar">LIMPAR CAMPOS</button>
+      </p>
+      <p class="form-inline">
+        <label for="resposta-inss">DESCONTO MENSAL DO INSS:</label>
+        <input class="form-control" type="text" id="resposta-inss" disabled>
+      </p>
+      <p class="form-inline">
+        <label for="resposta-imposto">DESCONTO ANUAL DO IR:</label>
+        <input class="form-control" type="text" id="resposta-imposto" disabled>
+      </p>
+    </div>
+  </article>
+  <article class="maior panel panel-primary">
+    <h3 class="text-center text-primary">Tabelas de referência para cálculos</h3>
+    <hr>
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th colspan="2"><a href="http://www.previdencia.gov.br/servicos-ao-cidadao/todos-os-servicos/gps/tabela-contribuicao-mensal/">Tabela para Empregado, Empregado Doméstico e Trabalhador Avulso 2017</a></th>
+        </tr>
+        <tr>
+          <th>Salário de Contribuição (R$)</th>
+          <th>Alíquota</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Até R$ 1.659,38</td>
+          <td>8%</td>
+        </tr>
+        <tr>
+          <td>De R$ 1.659,39 a R$ 2.765,66</td>
+          <td>9%</td>
+        </tr>
+        <tr>
+          <td>De R$ 2.765,67 até R$ 5.531,31</td>
+          <td>11%</td>
+        </tr>
+      </tbody>
+    </table>
+    <hr>
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th colspan="3"><a href="https://idg.receita.fazenda.gov.br/acesso-rapido/tributos/irpf-imposto-de-renda-pessoa-fisica#tabelas-progressivas-anuais" target="_blank">Tabela do Imposto de Renda 2017</a></th>
+        </tr>
+        <tr>
+          <th>Base de cálculo (R$)</th>
+          <th>Alíquota (%)</th>
+          <th>Parcela a deduzir do IRPF (R$)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Até 22.847,76</td>
+          <td>Isento</td>
+          <td>Isento</td>
+        </tr>
+        <tr>
+          <td>De 22.847,77 até 33.919,80</td>
+          <td>7,5</td>
+          <td>1.713,58</td>
+        </tr>
+        <tr>
+          <td>De 33.919,81 até 45.012,60</td>
+          <td>15</td>
+          <td>4.257,57</td>
+        </tr>
+        <tr>
+          <td>De 45.012,61 até 55.976,16</td>
+          <td>22,5</td>
+          <td>7.633,51</td>
+        </tr>
+        <tr>
+          <td>Acima de 55.976,16</td>
+          <td>27,5</td>
+          <td>10.432,32</td>
+        </tr>
+      </tbody>
+    </table>
+  </article>
+  
+  <!--EXERCÍCIO 4-->
+  <article class="maior panel panel-primary">
+    <h2><span class="glyphicon glyphicon-usd"></span> Pesquisa de opinião</h2>
+    <p>Em um cinema, certo dia, cada espectador respondeu a um questionário, que perguntava a sua idade (ID) e a opinião em relação ao filme (OP), seguindo os seguintes critérios:</p>
+    <table class="tabela-opinioes table table-condensed text-center">
+      <tr>
+        <td>A</td>
+        <td>Ótimo</td>
+      </tr>
+      <tr>
+        <td>B</td>
+        <td>Bom</td>
+      </tr>
+      <tr>
+        <td>C</td>
+        <td>Regular</td>
+      </tr>
+      <tr>
+        <td>D</td>
+        <td>Ruim</td>
+      </tr>
+      <tr>
+        <td>E</td>
+        <td>Péssimo</td>
+      </tr>
+    </table>
+    <p>A entrada de dados sobre a opinião deve ser validada.<br>
+      O final da pesquisa será indicado quando a idade do usuário for informada como ZERO.</p>
+	  <p>Construa um programa que, lendo esses dados, calcule e apresente: </p>
+      <ul>
+      <li>Quantidade de pessoas que respondeu a pesquisa</li>
+      <li>Média de idade das pessoas que responderam a pesquisa</li>
+		  <li>Porcentagem de cada uma das respostas</li>
+	  </ul>
+  </article>
+  <article class="maior panel panel-primary"> </article>
+  
+  <!--EXERCÍCIO 5-->
+  <article class="maior panel panel-primary">
+    <h2><span class="glyphicon glyphicon-thumbs-up"></span> Eleições e votos</h2>
+    <p>Em uma eleição há quatro candidatos, cada um com um código. Também há o voto nulo e o voto em branco.</p>
+    <p>Faça um programa em que os eleitores enviem seu voto e após a finalização vejam o relatório completo.</p>
+    <p>OBSERVAÇÃO: Para finalizar a leitura de dados, use um botão 'FINALIZAR'.</p>
+    <div class="panel-body">
+      <p class="form-inline">Qual o código do seu candidato?<br>
+        <input type="radio" id="um" name="candidatos" class="" value="1">
+        <label for="um">CANDIDATO 1</label>
+        <br>
+        <input type="radio" id="dois" name="candidatos" class="" value="2">
+        <label for="dois">CANDIDATO 2</label>
+        <br>
+        <input type="radio" id="tres" name="candidatos" class="" value="3">
+        <label for="tres">CANDIDATO 3</label>
+        <br>
+        <input type="radio" id="quatro" name="candidatos" class="" value="4">
+        <label for="quatro">CANDIDATO 4</label>
+        <br>
+        <input type="radio" id="cinco" name="candidatos" class="" value="5">
+        <label for="cinco">NULO</label>
+        <br>
+        <input type="radio" id="seis" name="candidatos" class="" value="6">
+        <label for="seis">EM BRANCO</label>
+        <br>
+        <button id="confirmar" class="btn btn-primary">ENVIAR VOTO</button>
+        <button id="finalizar" class="btn btn-primary">FINALIZAR VOTAÇÃO</button>
+      </p>
+	  </div>
+		</article>
+      <article class="maior panel panel-primary">
+      <h3 class="text-center text-primary">RELATÓRIO - ELEIÇÕES</h3>
+      <hr>
+      <table class="table table-striped">
+        <tr>
+          <td>TOTAL DE VOTOS</td>
+          <td>0</td>
+        </tr>
+         <tr>
+          <td>Votos CANDIDATO 1</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>Votos CANDIDATO 2</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>Votos CANDIDATO 3</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>Votos CANDIDATO 4</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>Votos NULOS</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>Porcentagem de votos NULOS em relação ao total</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>Votos EM BRANCO</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>Porcentagem de votos EM BRANCO em relação ao total</td>
+          <td>0</td>
+        </tr>
+      </table>
+  </article>
+  
+  <!--EXERCÍCIO 6--> 
+  
+</main>
+<footer>
+  <h4>Senac Lapa Tito - 2017</h4>
+</footer>
+
+</body>
+</html>

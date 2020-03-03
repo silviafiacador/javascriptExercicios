@@ -1,0 +1,223 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<meta name="author" content="Geovana Carolina Morales">
+	<meta name="description" content="Aplicativo Note Jow">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="css2.css">
+	<link rel="stylesheet" href="php2.php">
+	<title>Documento sem título</title>
+
+	<!--css links	--> 
+		
+	<link href="https://fonts.googleapis.com/css?family=Poiret+One&display=swap" rel="stylesheet">
+	
+	
+<!--boostrap links-->
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	
+	<style>
+body{padding: 0.1%;width: 100%;}		
+
+		/*	body	*/
+@media screen and (min-width: 319px)
+{body {background-image: url(fundo5.jpg);}}	
+		
+@media screen and (min-width: 335px)
+{body {background-image: url(fundo5.jpg);}}	
+
+@media screen and (min-width: 350px)
+{body {background-image: url(fundo5.jpg);}}
+		
+@media screen and (min-width: 375px)
+{body {background-image: url(fundo5.jpg);}}	
+			
+@media screen and (min-width: 410px)
+{body {background-image: url(fundo5.jpg);}}	
+
+		/*formss*/
+@media screen and (min-width: 319px)
+{#s1 {margin-left:25%;margin-top:15%;background-repeat:no-repeat;}}
+
+@media screen and (min-width: 335px)
+{#s1 {margin-left: 28%;margin-top: 20%;font-size: 23px;background-repeat:no-repeat;}}
+
+@media screen and (min-width: 350px)
+{#s1 {margin-left: 25%;margin-top: 20%;background-repeat:no-repeat;}}
+
+@media screen and (min-width: 375px)
+{#s1 {margin-left: 27%;margin-top: 20%;background-repeat:no-repeat;}}
+		
+@media screen and (min-width: 410px)
+{#s1 {margin-left: 20%;margin-top: 25%;font-size: 30px;background-repeat:no-repeat;}}
+
+		/*form nome */
+@media screen and (min-width: 319px)
+{#a1{margin-left: 10%;margin-top: 10%;background-repeat:no-repeat;}}
+
+@media screen and (min-width: 335px)
+{#a1 {margin-left: 13%;margin-top: 10%;background-repeat:no-repeat;}}
+
+@media screen and (min-width: 350px)
+{#a1 {margin-left: 13%;margin-top: 10%;background-repeat:no-repeat;}}
+
+@media screen and (min-width: 375px)
+{#a1 {margin-left: 13%;margin-top: 10%;background-repeat:no-repeat;}}
+	
+@media screen and (min-width: 375px)
+{#a1 {margin-left: 14%;margin-top: 10%;background-repeat:no-repeat;}}	
+	
+@media screen and (min-width: 410px)
+{#a1 {margin-left: 15%;margin-top: 13%;font-size: 23px;background-repeat:no-repeat;}}	
+
+		/*form e-mail*/
+@media screen and (min-width: 319px)
+{#a2 {margin-left: 10.5%;margin-top: 2%;background-repeat:no-repeat;}}			
+		
+@media screen and (min-width: 335px)
+{#a2 {margin-left: 13%;margin-top: 2%;background-repeat:no-repeat;}}			
+		
+@media screen and (min-width: 350px)
+{#a2 {margin-left: 13%;margin-top: 5%;background-repeat:no-repeat;}}			
+				
+@media screen and (min-width: 375px)
+{#a2 {margin-left: 14%;margin-top: 2%;background-repeat:no-repeat;}}				
+		
+@media screen and (min-width: 410px)
+{#a2 {margin-left: 15.1%;margin-top: 1%;font-size: 23px;background-repeat:no-repeat;}}	
+
+
+		/*butons a3*/
+@media screen and (min-width: 319px)
+{#a3 {margin-left:15%;margin-top: 11%;background-repeat:no-repeat;}}		
+
+@media screen and (min-width: 335px)
+{#a3 {margin-left:24%;margin-top:12%;background-repeat:no-repeat;}}	
+
+@media screen and (min-width: 350px)
+{#a3 {margin-left:21%;margin-top:14%;background-repeat:no-repeat;}}	
+		
+@media screen and (min-width: 375px)
+{#a3 {margin-left:23%;margin-top:13%;background-repeat:no-repeat;}}			
+		
+@media screen and (min-width: 410px)
+{#a3 {margin-left:25%;margin-top: 12%;font-size: 23px;background-repeat:no-repeat;}}			
+
+		/*butons caixa*/
+@media screen and (min-width: 319px)
+{#senha {margin-left:14%;background-repeat:no-repeat;}}		
+
+@media screen and (min-width: 335px)
+{#senha {margin-left:24%;background-repeat:no-repeat;}}	
+
+@media screen and (min-width: 350px)
+{#senha {margin-left:20%;background-repeat:no-repeat;}}	
+		
+@media screen and (min-width: 375px)
+{#senha {margin-left:23%;background-repeat:no-repeat;}}			
+		
+@media screen and (min-width: 410px)
+{#senha {margin-left:25%;background-repeat:no-repeat;}}		
+		
+		/*butons a4*/
+@media screen and (min-width: 319px)
+{#a4 {margin-left:15%;margin-top: 4%;background-repeat:no-repeat;}}		
+
+@media screen and (min-width: 335px)
+{#a4 {margin-left:25%;margin-top:10%;background-repeat:no-repeat;}}	
+
+@media screen and (min-width: 350px)
+{#a4 {margin-left:21%;margin-top: 8%;background-repeat:no-repeat;}}	
+		
+@media screen and (min-width: 375px)
+{#a4 {margin-left:23%;margin-top: 10%;background-repeat:no-repeat;}}			
+		
+@media screen and (min-width: 410px)
+{#a4 {margin-left:25%;margin-top: 8%;font-size: 23px;background-repeat:no-repeat;}}			
+
+		/*butons caixa*/
+@media screen and (min-width: 319px)
+{#confirmacao {margin-left:14%;background-repeat:no-repeat;}}		
+
+@media screen and (min-width: 335px)
+{#confirmacao {margin-left:24%;background-repeat:no-repeat;}}	
+
+@media screen and (min-width: 350px)
+{#confirmacao {margin-left:20%;background-repeat:no-repeat;}}	
+		
+@media screen and (min-width: 375px)
+{#confirmacao {margin-left:23%;background-repeat:no-repeat;}}			
+		
+@media screen and (min-width: 410px)
+{#confirmacao {margin-left:25%;background-repeat:no-repeat;}}			
+
+		/*butons mmmm*/
+@media screen and (min-width: 319px)
+{#mm {margin-left:32%;margin-top: 6%;margin-bottom: 11px;background-repeat:no-repeat;}}		
+
+@media screen and (min-width: 335px)
+{#mm {margin-left:35%;margin-top:10%;margin-bottom: 20px;background-repeat:no-repeat;}}	
+
+@media screen and (min-width: 350px)
+{#mm {margin-left:30%;margin-top: 11%;margin-bottom: 25px;background-repeat:no-repeat;}}	
+		
+@media screen and (min-width: 375px)
+{#mm {margin-left:35%;margin-top: 8%;margin-bottom: 20px;background-repeat:no-repeat;}}			
+		
+@media screen and (min-width: 410px)
+{#mm {margin-left:35%;margin-top: 10%;margin-bottom: 30px;background-repeat:no-repeat;}}	
+		
+	</style>
+</head>
+<body>
+		
+<div id="body">
+		<h3 id="s1"><strong>Cadastro N-Jow 📝</strong></strong></h3>
+	<form method="post" action="php2.php">
+	
+		<label   style="color:#C7183E;font-family: 'Poiret One', cursive;font-size: 18px;background: none;border-color:#FF5A5D;font-weight: bolder;"  type="text"  id="a1" for=""><strong>Nome</strong></label>
+		
+		<input   style="color:#C7183E;font-family: 'Poiret One', cursive;font-size: 18px;background: none;border-color:#FF5A5D;font-weight: bolder;" type="text" required maxlength="80" name="nome">
+		<br>
+		
+		<label   style="color:#C7183E;font-family: 'Poiret One', cursive;font-size: 18px;background: none;border-color:#FF5A5D;font-weight: bolder;" id="a2" for=""><strong>E-mail</strong></label>
+		
+		<input   style="color:#C7183E;font-family: 'Poiret One', cursive;font-size: 18px;background: none;border-color:#FF5A5D;font-weight: bolder;" type="text" required maxlength="80" name="email">
+		<br>
+		
+		<label   style="color:#C7183E;font-family: 'Poiret One', cursive;font-size: 18px;background: none;border-color:#FF5A5D;font-weight: bolder;"   id="a3"  for=""><strong>Crie uma senha</strong></label>
+		
+		<input   style="color:#C7183E;font-family: 'Poiret One', cursive;font-size: 18px;background: none;border-color:#FF5A5D;font-weight: bolder;"  type="password" name="senha" maxlength="8" minlength="4" required id="senha">
+		<br>
+
+		<label  style="color:#C7183E;font-family: 'Poiret One', cursive;font-size: 18px;background: none;border-color:#FF5A5D;font-weight: bolder;"  id="a4" for=""><strong>Redigite sua senha</strong></label>
+		
+		<input  style="color:#C7183E;font-family: 'Poiret One', cursive;font-size: 18px;background: none;border-color:#FF5A5D;font-weight: bolder;"   type="password" name="senha_confirma" maxlength="8" minlength="4" required id="confirmacao" onblur="verifica()">
+		
+		<a href=""><button type="submit" value="Cadastrar" id="mm" class="btn btn-outline-info"><strong>Enviar Cadastro</strong></button></a>
+<!--	verificação se as senhas coecidem-->
+<script>
+	function verifica(){
+		var senha, senha_confirma
+		senha= document.getElementById('senha').value;
+		senha_confirma= document.getElementById('confirmacao').value;
+		if (senha!=senha_confirma){
+			alert("Senhas não coincidem");
+
+			document.getElementById('senha').value="";
+			document.getElementById('confirmacao').value="";
+			document.getElementById('senha').focus();
+
+		}
+	}
+
+</script>
+<!--fim de script-->
+		
+	</form>
+	
+</div>
+</body>
+</html>

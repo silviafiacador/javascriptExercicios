@@ -1,0 +1,175 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Exercícios com Javascript</title>
+<link rel="stylesheet" href="css/estilo.css">
+<link rel="stylesheet" href="css/bootstrap.css">
+</head>
+
+<body>
+<main class="container">
+c
+  <nav class="collapse navbar-collapse">
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="index.html" class="navbar-link">Introdução ao Javascript</a></li>
+      <li><a href="logica-simples.html" class="navbar-link">Lógica simples com JS</a></li>
+      <li><a href="logica-complexa.html" class="navbar-link">Lógica complexa com JS</a></li>
+    </ul>
+  </nav>
+  <section class="jumbotron">
+    <h2>JAVASCRIPT</h2>
+    <p>Linguagem de programação de front end que define comportamentos para os elementos da estrutura das páginas web. Pode-se criar e manipular os elementos, alterando seus atributos ou seu conteúdo.</p>
+    <p><a class="btn btn-primary btn-lg" href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" target="_blank">Veja mais no MDN &raquo;</a></p>
+  </section>
+  <section class="container-fluid">
+    <h3 id="titulo">Conhecendo o básico da linguagem</h3>
+    <p>
+      <button class="btn btn-primary" onClick="alert('Olá!')">ALERT</button>
+      <button class="btn btn-primary" onClick="confirm('E aí, tudo bem?')">CONFIRM</button>
+      <button class="btn btn-primary" onDblClick="prompt('Manifeste sua satisfação com a fantasia do presidente vampiro:')">PROMPT</button>
+    </p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, amet porro pariatur suscipit debitis, aliquid adipisci quod molestiae, harum dolore tempore hic sunt eos iste consequuntur fugit sequi sed! Optio.</p>
+    <p> 
+      <script>
+		//comentário js
+			document.write('Este texto foi inserido através do javascript.');
+			
+			//criar variável para guardar o texto de um elemento:
+			var titulo = document.getElementById('titulo').textContent;
+			console.log('O texto que está no elemento selecionado pelo id é: '+titulo);
+		</script> 
+    </p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit voluptatibus odit, nihil dicta dignissimos id rem quisquam ab iste vel omnis sint tempora voluptatem unde debitis dolor facilis adipisci reiciendis.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore obcaecati amet repellendus. Sit, eligendi deleniti voluptatum sed velit quidem quam voluptatem, perspiciatis eius ex accusamus molestias laboriosam sequi tempora libero?</p>
+    <hr>
+    <p id="troca">Texto a ser trocado pelo script</p>
+    <p> <small class="small">Clique no botão para trocar o nome:</small>
+      <button class="btn btn-default" id="nome" onClick="atualizaNome()">Olá, Maria, como vai?</button>
+    </p>
+    <hr>
+    <p><small>Clique para criar parágrafos: </small>
+      <button class="btn btn-default" id="cria"> Clique</button>
+    </p>
+    <div class="container" id="caixa">
+      <p>Os novos parágrafos virão aqui:</p>
+    </div>
+    <hr>
+    <!--div popup-->
+    <div id="popup" class="popup">
+      <p id="exibe-data">Saudação</p>
+      <p>Esse é um exemplo de popup utilizando o elemento <code>div</code>. Dessa maneira esse pop-up não será bloqueado. <br>
+        <small>
+        <button onClick="maria()">FECHAR</button>
+        </small></p>
+    </div>
+    <p>
+      <button id="abre" class="btn btn-primary">Abrir pop-up</button>
+      <button id="fecha" class="btn btn-primary">Fechar pop-up</button>
+    </p>
+    <hr>
+    <!--estado do seu humor-->
+    <p>Selecione seu humor na lista abaixo e veja como seria sua saudação:</p>
+    <p>
+    <ul class="list-group">
+      <li class="list-group-item">Humor excelente!!! <span>DIGITE 1</span></li>
+      <li class="list-group-item">Humor normal. <span>DIGITE 2</span></li>
+      <li class="list-group-item">Mau humor :( <span>DIGITE 3</span></li>
+    </ul>
+    <input class="input-lg" type="text" id="humor">
+    <button id="saudar" class="btn btn-primary">VER SAUDAÇÃO</button>
+    </p>
+    <p>Mensagem:</p>
+    <p id="mensagem-humor">A mensagem padrão é: 'Olá, como vai?'</p>
+    
+    
+    <hr>
+    <p>Array JS</p>
+    <p>
+      <button class="btn btn-primary" onClick="todasCores()">Veja o array completo</button>
+    </p>
+    <p>
+      <button class="btn btn-primary" onClick="algumaCor()">Veja o primeiro dado do array</button>
+    </p>
+    <p>
+      <button class="btn btn-primary" onClick="larguraArray()">Veja a extensão do array</button>
+    </p>
+    <p>
+      <button class="btn btn-primary" onClick="adicionaCor()">Insira uma cor no array</button>
+    </p>
+    <p>
+      <button class="btn btn-primary" onClick="encontraCor()">Encontre uma cor do array</button>
+    </p>
+    <p>
+      <button class="btn btn-primary">Remova uma cor do array</button>
+    </p>
+    <p>
+      <button class="btn btn-primary">Mostrar os índices das cores do array</button>
+    </p>
+    <hr>
+    <p>TABUADAS com loops</p>
+    <p>
+      <button class="btn btn-primary" onClick="tabuada1()">TABUADA COM WHILE</button>
+    </p>
+    <p id="tabuada1"></p>
+    <p>
+      <button class="btn btn-primary" onClick="tabuada2()">TABUADA COM DO WHILE</button>
+    </p>
+    <p id="tabuada2"></p>
+    <hr>
+    <p>Soma usando função com argumentos e retorno</p>
+    <p>Digite os números para ver a soma:</p>
+    <p>
+      <label for="numero1">PRIMEIRO NÚMERO:</label>
+      <input class="longo input-lg" type="number" id="numero1">
+      <br>
+      <label for="numero2">SEGUNDO NÚMERO:</label>
+      <input class="longo input-lg" type="number" id="numero2" onBlur="somaValores()">
+    </p>
+    <p>Resultado: <span id="resultado-soma"></span></p>
+    <hr>
+    <p>Tabela de operações matemáticas</p>
+    <p>Digite o número e escolha a operação para ver a tabela:</p>
+    <p>
+      <label for="num">NÚMERO:</label>
+      <input class="longo input-lg" type="number" id="num" min="1" max="10" step="1" placeholder="de 1 a 10">
+    </p>
+    <p>
+      <button class="btn btn-primary" value="adic" onClick="tabelaNumeros(this.value)">ADIÇÃO</button>
+      <button class="btn btn-primary" value="sub" onClick="tabelaNumeros(this.value)">SUBTRAÇÃO</button>
+      <button class="btn btn-primary" value="mult" onClick="tabelaNumeros(this.value)">MULTIPLICAÇÃO</button>
+      <button class="btn btn-primary" value="divi" onClick="tabelaNumeros(this.value)">DIVISÃO</button>
+    </p>
+    <p id="resultado"></p>
+    <hr>
+    <p>Seleção de opção</p>
+    <p>
+      <input type="radio" name="opcao" value="esportes" id="esportes" onChange="pegaValor()">
+      <label for="esportes">Esportes</label>
+      <br>
+      <input type="radio" id="educacao" name="opcao" value="educacao" onChange="pegaValor()">
+      <label for="educacao">Educação</label>
+      <br>
+      <input type="radio" id="politica" name="opcao" value="politica" onChange="pegaValor()">
+      <label for="politica">Política</label>
+      <br>
+      <input type="radio" id="artes" name="opcao" value="artes" onChange="pegaValor()">
+      <label for="artes">Artes</label>
+    </p>
+  </section>
+</main>
+<footer>
+  <h4>Senac Lapa Tito - 2017</h4>
+</footer>
+
+<!-- chamada para os arquivos de scripts --> 
+<script src="js/scripts.js"></script>
+</body>
+</html>
+
+
+
+
+
+

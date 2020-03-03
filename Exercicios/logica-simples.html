@@ -1,0 +1,181 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width= device-width, initial-scale=1">
+<title>Exercícios com Javascript</title>
+<link rel="stylesheet" href="css/estilo.css">
+<link rel="stylesheet" href="css/bootstrap.css">
+</head>
+
+<body>
+<main class="container">
+  <header class="page-header">
+    <h1>Raciocínio lógico com Javascript (simples)</h1>
+  </header>
+  <nav class="collapse navbar-collapse">
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="index.html" class="navbar-link">Introdução ao Javascript</a></li>
+      <li><a href="logica-simples.html" class="navbar-link">Lógica simples com JS</a></li>
+      <li><a href="logica-complexa.html" class="navbar-link">Lógica complexa com JS</a></li>
+    </ul>
+  </nav>
+  <!--EXERCÍCIO 1-->
+  <article class="panel panel-primary">
+    <h2 class="h2"><span class="glyphicon glyphicon-move"></span> Área de formas geométricas </h2>
+    <p>Sua  equipe  está  desenvolvendo um  sistema de desenho e  coube a  você  a tarefa  de  desenvolver programas para calcular a área das seguintes figuras geométricas:<br>
+      Retângulo (base x altura)<br>
+      Círculo (π x Raio2 )</p>
+    <button id="retangulo" class="btn btn-primary" onClick="areaRet();">ÁREA DO RETÂNGULO</button>
+    <button id="circulo" class="btn btn-primary">ÁREA DO CÍRCULO</button>
+  </article>
+  
+  <!--EXERCÍCIO 2-->
+  <article class="panel panel-primary">
+    <h2> <span class="glyphicon glyphicon-calendar"></span> Calculadora de idade em 2050</h2>
+    <p>Faça um programa que receba o ano de nascimento de uma pessoa, calcule e mostre:<br>
+      a.	A idade dessa pessoa;<br>
+      b.	Quantos anos ela terá em 2050.</p>
+    <div class="panel-body">
+      <p class="form-inline">
+        <label for="nome">Seu nome, por favor:</label>
+        <input class="form-control" type="text" id="nome">
+      </p>
+      <p class="form-inline">
+        <label for="ano-nasc">Em que ano você nasceu?</label>
+        <input class="form-control" type="number" id="ano-nasc">
+      </p>
+      <p>
+        <button id="idades" class="btn btn-primary">CALCULAR</button>
+      </p>
+      <p>Resposta: <span id="seu-nome" class="resposta">&nbsp;</span><span id="resultado-paragrafo" class="resposta">&nbsp;</span></p>
+      <input class="form-control" type="text" id="resultado-input" value="Resposta aqui..." disabled>
+    </div>
+  </article>
+  
+  <!--EXERCÍCIO 3 -->
+  <article class="panel panel-primary">
+    <h2><span class="glyphicon glyphicon-education"></span> Média de Notas</h2>
+    <p>Faça um programa que calcule e exiba na tela a média entre as 4 notas bimestrais de um aluno.</p>
+    <div class="panel-body">
+      <p  class="form-inline">
+        <label for="n1" class="label-nota">Primeira nota:</label>
+        <input class="form-control" type="number" min="0" max="10" step="0.5" id="n1">
+      </p>
+      <p class="form-inline">
+        <label for="n2" class="label-nota">Segunda nota:</label>
+        <input class="form-control" type="number" min="0" max="10" step="0.5" id="n2">
+      </p>
+      <p class="form-inline">
+        <label for="n3" class="label-nota">Terceira nota:</label>
+        <input class="form-control" type="number" min="0" max="10" step="0.5" id="n3">
+      </p>
+      <p class="form-inline">
+        <label for="n4" class="label-nota">Quarta nota:</label>
+        <input class="form-control" type="number" min="0" max="10" step="0.5" id="n4">
+      </p>
+      <p>
+        <button id="calcula-media" class="btn btn-primary">CALCULAR MÉDIA</button>
+      </p>
+      <p class="form-group-lg">Sua média de notas é:
+        <input type="text" id="media" disabled>
+      </p>
+    </div>
+  </article>
+  
+  <!--EXERCÍCIO 4-->
+  <article class="panel panel-primary">
+    <h2><span class="glyphicon glyphicon-usd"></span> Aumento de Salário </h2>
+    <p>Faça um programa que aumente o salário de um funcionário de acordo com o percentual desejado e exiba o novo valor na tela.</p>
+    <div class="panel-body">
+      <p class="form-inline">
+        <label for="salario" class="">Qual é o salário a ser reajustado?</label>
+        <input type="number" class="form-control" id="salario">
+      </p>
+      <p class="form-inline">
+        <label for="reajuste">Qual a porcentagem de reajuste?</label>
+        <input class="form-control" type="number" id="reajuste" min="0" max="100">
+      </p>
+      <p>
+        <button id="calcula-salario" class="btn btn-primary">CORRIGIR SALÁRIO</button>
+      </p>
+      <p class="form-group-lg">O novo salário corrigido é:
+        <input type="text" id="novo-salario" disabled>
+      </p>
+    </div>
+  </article>
+  
+  <!--EXERCÍCIO 5-->
+  <article class="panel panel-primary">
+    <h2><span class="glyphicon glyphicon-music"></span> Venda de ingresso </h2>
+    <p>Faça um programa que receba o custo de um espetáculo teatral e o preço do convite desse espetáculo. Esse programa deverá calcular e mostrar a quantidade de convites que devem ser vendidos para que pelo menos o custo do espetáculo seja alcançado.</p>
+    <div class="panel-body">
+      <p class="form-inline">
+        <label for="custo">Qual o custo do seu espetáculo?</label>
+        <input type="number" id="custo" class="form-control">
+      </p>
+      <p class="form-inline">
+        <label for="ingresso">Qual o preço do ingresso?</label>
+        <input type="number" id="ingresso" class="form-control">
+      </p>
+      <p>
+        <button id="calcula-ingressos" class="btn btn-primary">CALCULAR INGRESSOS</button>
+      </p>
+      <p>Resposta: <span class="resposta" id="resultado"></span></p>
+    </div>
+  </article>
+  
+  <!--EXERCÍCIO 6-->
+  <article class="panel panel-primary">
+    <h2><span class="glyphicon glyphicon-road"></span> Consumo de combustível </h2>
+    <p>Elabore um algoritmo que determine o consumo médio de um automóvel sendo fornecida a distância total percorrida pelo automóvel e o total de combustível gasto.</p>
+    <div class="panel-body">
+      <p class="form-inline">
+        <label for="distancia">Distância percorrida: </label>
+        <input type="number" id="distancia" class="form-control">
+      </p>
+      <p class="form-inline">
+        <label for="comb">Combustível gasto: </label>
+        <input type="number" class="form-control" id="comb">
+      </p>
+      <p>
+        <button id="calcula-consumo" class="btn btn-primary">CALCULAR</button>
+      </p>
+      <p class="form-inline">
+        <label for="consumo">Consumo médio de combustível:</label>
+        <input class="form-control" type="text" id="resposta-consumo" disabled>
+      </p>
+    </div>
+  </article>
+  
+  <!--EXERCÍCIO 7-->
+  <article class="panel panel-primary">
+    <h2><span class="glyphicon glyphicon-piggy-bank"></span> Correção monetária </h2>
+    <p>Faça um algoritmo que receba um valor que foi depositado e exiba o valor com rendimento após um mês.</p>
+    <div class="panel-body">
+      <p class="form-inline">
+        <label for="deposito">Valor depositado: </label>
+        <input type="number" id="deposito" class="form-control">
+      </p>
+      <p class="form-inline">
+        <label for="rendimento">Taxa de rendimento (%):</label>
+        <input type="number" class="form-control" id="rendimento">
+      </p>
+      <p>
+        <button id="calcula-valor" class="btn btn-primary">CALCULAR</button>
+      </p>
+      <p class="form-inline">
+        <label for="corrigido">Valor corrigido:</label>
+        <input class="form-control" type="text" id="corrigido" disabled>
+      </p>
+    </div>
+  </article>
+</main>
+<footer>
+  <h4>Senac Lapa Tito - 2017</h4>
+</footer>
+
+<script src="js/logica1.js"></script>
+	
+</body>
+</html>
