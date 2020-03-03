@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*exercício 1 - Crie uma classe para representar uma pessoa, com os atributos privados de nome, data de nascimento e altura. Crie os métodos públicos necessários para sets e gets e também um método para imprimir todos dados de uma pessoa. Crie um método para calcular a idade da pessoa.*/
+
+        class Pessoa {   //início  da classe
+            //método construtor
+            constructor() 
+            {
+                this.nome
+                this.nascimento
+                this.altura
+            }
+            //**************************************************************
+            //pegando informações
+            getNome(){
+                return this.nome 
+            }
+            getNascimento(){
+                return this.nascimento
+            }
+            getAltura(){
+                return this.altura
+            }
+            //**************************************************************
+            //atualizando informações
+            setNome(_nome){
+                this.nome=_nome
+            }
+            setNascimento(_nascimento){
+                this.nascimento=_nascimento
+            }
+            setAltura(_altura){
+                this.altura=_altura
+            }
+            imprimeTudo(_nome,_nascimento,_altura) {
+                alert ("Nome: "+_nome+"\nNascimento: "+_nascimento+"\nAltura: "+_altura)
+            }
+            calculaIdade(_nascimento)
+            {
+                var anoNascimento = _nascimento.split("/").reverse()[0] 
+                alert ("Ano nascimento: "+anoNascimento)
+                var anoAtual =new Date()   //objeto data
+                anoAtual=anoAtual.getFullYear()   //método getFullYear()
+                alert ("Ano atual: "+anoAtual)
+                alert ("Idade: "+(anoAtual-anoNascimento))
+            }
+        }   //fim da classe
+
+        //instanciando a classe
+        var pessoa = new Pessoa()    //objeto
+        pessoa.setNome("Silvia")
+        pessoa.setNascimento("16/08/1963")
+        pessoa.setAltura("1.68 m")
+        pessoa.imprimeTudo(pessoa.getNome(),pessoa.getNascimento(),pessoa.getAltura())
+
+        var pessoa1 = new Pessoa()   //objeto
+        pessoa1.setNome("Sandro")
+        pessoa1.setNascimento("21/05/1963")
+        pessoa1.setAltura("1.80 m")
+        pessoa1.calculaIdade(pessoa1.getNascimento())
+        pessoa1.imprimeTudo(pessoa1.getNome(),pessoa1.getNascimento(),pessoa1.getAltura())
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
+

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript - POO</title>
+</head>
+<body>
+  
+    <script>
+        /*definindo classe através do uso de uma função - método construtor */
+        class Pessoa {
+            constructor()
+             {
+                //this = palavra reservada que refere-se ao objeto proprietário
+                this.nome   //atributo
+                this.idade 
+             }   
+
+            getNome() {   //pega - função sem parâmetros
+                return this.nome
+            }
+            getIdade() {
+                return this.idade 
+            }
+
+            setNome(_nome) {
+                this.nome =_nome     //altera - função com parâmetros
+            }
+            setIdade(_idade) {
+                this.idade=_idade
+            }
+
+       
+       }
+       var pessoa1=new Pessoa()    //criação do objeto - instanciando a classe
+       pessoa1.setNome("Silvia") //enviando dados  para o objeto pessoa1
+       pessoa1.setIdade(56)
+       alert ("Pessoa: "+pessoa1.getNome() + " Idade: "+pessoa1.getIdade())
+       alert(pessoa1.getNome())
+       alert(typeof pessoa1)   //verifico que é realmente um objeto
+       var pessoa2=new Pessoa()  //criação do objeto - instanciando a classe
+       pessoa2.setNome("Sandro")
+       alert(pessoa2.getNome())
+       alert(typeof pessoa2) //verifico que é realmente um objeto
+
+
+       
+
+    
+
+
+        
+
+    </script>
+</body>
+</html>
